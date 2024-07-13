@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageGallery.Model", "Image
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTech.IDP", "..\..\TTech.IDP\TTech.IDP.csproj", "{9528FA22-D83F-40DB-B27C-D31E11CC014E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageGallery.Authorization", "ImageGallery.Authorization\ImageGallery.Authorization.csproj", "{47B9498D-D611-4DCE-B203-8E353731205A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageGallery.BFF", "ImageGallery.BFF\ImageGallery.BFF.csproj", "{2A0D85EE-12A8-41FD-BAE1-19D683AAE8DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{9528FA22-D83F-40DB-B27C-D31E11CC014E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9528FA22-D83F-40DB-B27C-D31E11CC014E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9528FA22-D83F-40DB-B27C-D31E11CC014E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47B9498D-D611-4DCE-B203-8E353731205A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B9498D-D611-4DCE-B203-8E353731205A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B9498D-D611-4DCE-B203-8E353731205A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B9498D-D611-4DCE-B203-8E353731205A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0D85EE-12A8-41FD-BAE1-19D683AAE8DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0D85EE-12A8-41FD-BAE1-19D683AAE8DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0D85EE-12A8-41FD-BAE1-19D683AAE8DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0D85EE-12A8-41FD-BAE1-19D683AAE8DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -128,7 +128,7 @@ namespace ImageGallery.Client.Controllers
             return RedirectToAction("Index");
         }
 
-        [Authorize(Roles = "PayingUser")]
+        [Authorize(Policy = "UserCanAddImage")]
         public IActionResult AddImage()
         {
             return View();
@@ -136,7 +136,7 @@ namespace ImageGallery.Client.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "PayingUser")]
+        [Authorize(Policy = "UserCanAddImage")]
         public async Task<IActionResult> AddImage(AddImageViewModel addImageViewModel)
         {
             if (!ModelState.IsValid)
@@ -188,6 +188,7 @@ namespace ImageGallery.Client.Controllers
         {
             var identityToken = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.IdToken);
             var accessToken = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.AccessToken);
+            var refreshToken = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.RefreshToken);
 
             var userClaimsStringBuilder = new StringBuilder();
 
@@ -196,7 +197,10 @@ namespace ImageGallery.Client.Controllers
                 userClaimsStringBuilder.AppendLine($"Claim Type : {claim.Type} - Claim Value : {claim.Value}");
             }
 
-            _logger.LogInformation($"Identity token & user claims : \n{identityToken} \n {userClaimsStringBuilder}");
+            _logger.LogInformation($"Identity token & user claims : \n{identityToken} " +
+                $"\n {userClaimsStringBuilder} " +
+                $"\n access toke : {accessToken}" +
+                $"\n refresh token : {refreshToken}");
         }
     }
 }
